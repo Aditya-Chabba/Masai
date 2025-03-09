@@ -1,0 +1,46 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the container */
+.container {
+    display: flex; /* Use flexbox for proper alignment */
+    justify-content: center; /* Center horizontally */
+    gap: 10px; /* Add spacing between boxes */
+    padding: 20px;
+}
+
+/* Style each box */
+.box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Fixed text positioning */
+.text {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%); /* Center it properly */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack boxes on smaller screens */
+        align-items: center;
+    }
+}

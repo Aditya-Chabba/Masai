@@ -1,0 +1,9 @@
+/* Descendant combinator: Targets all <p> elements inside .container */
+.container p {
+    color: blue;
+}
+
+/* Child combinator: Targets only the <p> that is a direct child of .container */
+.container > p {
+    font-weight: bold;
+}

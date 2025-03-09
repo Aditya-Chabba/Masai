@@ -1,0 +1,30 @@
+/* Remove default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the main title */
+#main-title {
+    font-size: 32px;
+    color: darkblue;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Styling for the subtitle */
+#subtitle {
+    font-size: 24px;
+    color: darkgreen;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for paragraphs */
+p {
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin: 10px;
+    font-size: 16px;
+}

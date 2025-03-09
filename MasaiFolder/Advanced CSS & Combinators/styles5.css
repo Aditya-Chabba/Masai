@@ -1,0 +1,85 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    padding: 20px;
+}
+
+/* Style each section */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Style section titles */
+h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* General link styles */
+.section a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Different colors for each section using descendant combinators */
+.section-1 a {
+    background: #ff6347;
+    color: white;
+}
+
+.section-2 a {
+    background: #4caf50;
+    color: white;
+}
+
+.section-3 a {
+    background: #1e90ff;
+    color: white;
+}
+
+/* Direct child combinator: Style only direct child links */
+.section > a {
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+/* Nested links inside div */
+.nested a {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    padding: 5px 10px;
+}
+
+/* Hover effect */
+.section a:hover {
+    background: yellow;
+    color: black;
+}
+
+/* Active effect (when clicked) */
+.section a:active {
+    background: orange;
+    color: white;
+}
+
+/* Attribute selector: Links starting with "https" */
+a[href^="https"] {
+    background: purple !important;
+    color: white !important;
+    font-weight: bold;
+    border: 2px solid gold;
+}

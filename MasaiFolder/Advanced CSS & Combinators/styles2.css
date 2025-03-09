@@ -1,0 +1,14 @@
+/* Element selector (Least Specific) */
+div {
+    color: green;  /* This will be overridden */
+}
+
+/* Class selector (More Specific than element) */
+.highlight {
+    color: blue; /* This will be overridden by ID */
+}
+
+/* ID selector (Most Specific) */
+#special {
+    color: red; /* This will take precedence */
+}
