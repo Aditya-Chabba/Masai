@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Exploration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="outer" class="box">
+        Outer Div
+        <div id="middle" class="box">
+            Middle Div
+            <div id="inner" class="box">
+                Inner Div
+                <button id="innerBtn">Click Me (Inner Button)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
