@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences Form</title>
+    <style>
+        body.light {
+            background-color: white;
+            color: black;
+        }
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form id="preferencesForm">
+        <label for="theme">Theme:</label>
+        <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+
+        <label for="language">Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+        </select>
+
+        <label for="notifications">Notifications:</label>
+        <input type="checkbox" id="notifications">
+
+        <button type="submit">Save Preferences</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('preferencesForm');
+        const themeSelect = document.getElementById('theme');
+        const languageSelect = document.getElementById('language');
+        const notificationsCheckbox = document.getElementById('notifications');
+
+        // Load preferences on page load
+        window.onload = () => {
+            const preferences = localStorage.getItem('preferences');
+            if (preferences) {
+                const parsedPreferences = JSON.parse(preferences);
+
+                // Set values correctly
+                themeSelect.value = parsedPreferences.theme;
+                languageSelect.value = parsedPreferences.language;
+                notificationsCheckbox.checked = parsedPreferences.notifications;
+
+                // Apply the theme dynamically
+                document.body.className = parsedPreferences.theme;
+            }
+        };
+
+        // Save preferences and apply theme dynamically
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const preferences = {
+                theme: themeSelect.value,
+                language: languageSelect.value,
+                notifications: notificationsCheckbox.checked
+            };
+
+            localStorage.setItem('preferences', JSON.stringify(preferences));
+
+            // Apply theme instantly
+            document.body.className = preferences.theme;
+
+            alert('Preferences Saved!');
+        });
+    </script>
+</body>
+</html>
