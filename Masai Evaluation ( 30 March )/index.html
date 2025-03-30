@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Sharing App</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-recipe.html">Add Recipe</a></li>
+            </ul>
+        </nav>
+        <button id="darkModeToggle">Dark Mode</button>
+    </header>
+    
+    <section id="filter">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="dessert">Dessert</option>
+            <option value="drinks">Drinks</option>
+        </select>
+    </section>
+    
+    <section id="recipes"></section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add a New Recipe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-recipe.html">Add Recipe</a></li>
+            </ul>
+        </nav>
+        <button id="darkModeToggle">Dark Mode</button>
+    </header>
+    
+    <section id="recipe-form">
+        <form id="addRecipeForm">
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" required>
+            
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" required></textarea>
+            
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+                <option value="drinks">Drinks</option>
+            </select>
+            
+            <label for="steps">Preparation Steps:</label>
+            <textarea id="steps" required></textarea>
+            
+            <button type="submit">Add Recipe</button>
+        </form>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
